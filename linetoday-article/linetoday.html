@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./linetoday.style.css">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const App = () => {
+            const products = [
+                {
+                    id:1,
+                    title: <div>什麼是「米其林星鑰」？</div>,
+                    content: <div>《米其林指南》最於於1900年由米其林輪胎公司創辦，一開始是為了汽車旅行者提供路線指南、旅遊名單和餐廳建議，1926年開始則開始評選優秀餐廳，並授予米其林星，並成為全球最知名的美食評比標準。日本則在2007年成為亞洲第一個納入《米其林指南》評選的國家，台北則在2018年被納入評選。<br />然而在1920年代開始，《米其林指南》其實就開始為歐洲、亞洲旅人提供指南。直至近四年，在提供更豐富旅行體驗的前提下《米其林指南》開始全面更新飯店名單，能透過官網、APP 搜尋全球最佳餐廳和飯店名單，更有專業的評審團隊建議以及實際的分析。<br />全新名單推薦了超過五千家飯店，為全球旅人提供最優質的住宿建議，這些飯店在設計、建築、服務和品牌個性等方面表現優異，才會被授予「米其林星鑰」的肯定。從今年開始更必照米其林餐廳名單推出「米其林星鑰」，將會依照地點分批公布，首發就選於《米其林指南》發源地法國。"</div>,
+                    img: <img src="/img/linetoday/hotel-1.jpg" />
+                },
+                {
+                    id:2,
+                    title: <div>「米其林星鑰」其數字代表了什麼？</div>,
+                    content: <div>這些星鑰代表著餐廳或酒店的優秀水準，分為一到三星，每個星級都有其特殊意義。<br />一星鑰：代表著優秀的住宿體驗，值得前往（A very special stay）<br />二星鑰：代表著卓越的住宿體驗，值得繞道前往（An exceptional stay）<br />三星鑰：是米其林最高的榮譽之一，因而成就了非凡難忘的住宿體驗，值得專程前往（An extraordinary stay）</div>,
+                    img: <img src="/img/linetoday/hotel-2.jpg" />
+                },
+                {
+                    id:3,
+                    title: <div>法國「米其林星鑰」名單亮點—<br />亮點1｜巴黎為最大贏家</div>,
+                    content: <div>根據《米其林指南》提供的資料顯示，此次法國「米其林星鑰」名單共有24家三星鑰、38家二星鑰與127間一星鑰酒店。而其中巴黎就囊括了9家，同時也為巴黎奧運而來的遊客提供了更多優秀住宿選擇。繼法國之後，「米其林星鑰」將於4月24日在美國（亞特蘭大、加州、芝加哥、科羅拉多、佛羅里達、紐約、華盛頓特區）公布名單，接下來還有在西班牙、義大利等等其他國家也將跟進舉辦。"</div>,
+                    img: <img src="/img/linetoday/hotel-3.jpg" />
+                }
+            ]
+
+
+
+            const Card = (props) => {
+                const { title, content, img } = props;
+                return (
+                    <>
+                        <div className="card">
+                            <article className="card-article">
+                                <h2>{title}</h2>
+                                <p>{content}</p>
+                                <div>{img}</div>
+                            </article>
+                        </div>
+                    </>
+                )
+            }
+
+
+            return (
+                <>
+                    <div className="card">
+                        <section className="card-nav">
+                            <div className="card-nav-linetoday-logo">
+                                <img src="/img/linetoday/linetoday-logo.png" /></div>
+                            <div className="login">登入</div>
+                        </section>
+
+                        <section className="card-header">
+                            <h1>飯店版米其林！2024首屆法國「米其林星鑰」名單公佈，24間三星鑰酒店完整名單</h1>
+                            <p>《米其林指南》推出了飯店版米其林（MICHELIN Key）—「米其林星鑰」。指南從600家酒店，挑選出位於法國各地189家優秀的酒店，最後共有24家獲得三星鑰肯定，38家二星鑰以及127間一星鑰酒店。而其中巴黎就囊括了9家，成為此次最大贏家，同時也為巴黎奧運而來的遊客提供了更多優秀住宿選擇。</p>
+                        </section>
+
+                        {/*使用卡片元件*/}
+                        {
+                            // 使用map方式執行迴圈
+                            products.map((product) => {
+                                return <Card key={product.id} title={product.title} content={product.content} img={product.img} />
+                            })
+                        }
+                    </div>
+                </>
+            )
+
+        }
+
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./基本框架練習.css">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const App = () => {
+            return (
+                <>
+                    {/*header*/}
+                    <header className="topbar">
+                        <h1 className="logo">Doris Liu</h1>
+
+                        <nav>
+                            <ul className="menu">
+                                <li>< a href="#" > HOME </a></li>
+                                <li>< a href="#" > NEWS </a></li>
+                                <li>< a href="#" > ABOUT </a></li>
+                                <li>< a href="#" > SERVICE </a></li>
+                                <li>< a href="#" > PRODUCT </a></li>
+                            </ul>
+                        </nav>
+
+                    </header>
+
+
+                    {/*main*/}
+                    <main>
+                        <div id="banner">
+                            <div className="banner-img">
+                                <img src="/img/bg-unsplash.jpg"></img>
+                                <div className="banner-p"><p>BANNER</p></div>
+                            </div>
+
+                        </div>
+
+                        <section id="about">
+                            <h2 className="title">ABOUT US</h2>
+                            <div className="container">
+                                <div className="content">
+                                    <h2>TITLE</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa saepe tenetur quasi rerum id voluptas, ducimus quod ratione natus impedit deserunt, ipsam eveniet. A vel facilis veniam incidunt, qui repellat?</p>
+                                </div>
+                                <figure><img src="/img/image_tokyo.jpg" alt=""></img></figure>
+                            </div>
+                        </section>
+
+                        <section id="news">
+                            <h2>NEWS</h2>
+                            <div className="list-box">
+                                <article> news1</article>
+                                <article> news2</article>
+                                <article> news3</article>
+                                <article> news4</article>
+                            </div>
+                        </section>
+
+                        <section id="service">
+                            <h2 className="title"> SERVICE </h2>
+                            <ul className="list-box">
+                                <li>service1</li>
+                                <li>service2</li>
+                                <li>service3</li>
+                            </ul>
+                        </section>
+
+                        <section id="product">
+                            <h2 className="title">PRODUCT</h2>
+                            <div className="list-box">
+                                <div className="item">product1</div>
+                                <div className="item">product2</div>
+                                <div className="item">product3</div>
+                                <div className="item">product4</div>
+                                <div className="item">product5</div>
+                                <div className="item">product6</div>
+                                <div className="item">product7</div>
+                                <div className="item">product8</div>
+                                <div className="item">product9</div>
+                            </div>
+                            <ul className="pagination">
+                                
+                                <li><a href=""> ⇤ </a></li>
+                                <li><a href=""> &lt; </a></li>
+                                <li><a href="">1 </a></li>
+                                <li><a href=""> 2 </a></li>
+                                <li><a href=""> 3 </a></li>
+                                <li><a href=""> 4 </a></li>
+                                <li><a href=""> 5 </a></li>
+                                <li><a href=""> ... </a></li>
+                                <li><a href=""> &gt; </a></li>
+                                <li><a href=""> ⇥ </a></li>
+                            </ul>
+                        </section>
+                    </main>
+
+
+                    {/*footer*/}
+                    <footer>
+                        <h1 className="logo">Doris Liu</h1>
+                        <nav>
+                            <ul className="menu">
+                                <li><a href="#"> HOME </a></li>
+                                <li><a href="#"> ABOUT </a></li>
+
+                                <li>
+                                    <a href="#"> NEWS </a>
+                                    <ul className="submenu">
+                                        <li><a href="#"> 媒體報導 </a></li>
+                                        <li><a href="#"> 優惠活動 </a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#"> SERVICE </a></li>
+
+                                <li>
+                                    <li><a href="#">PRODUCT</a></li>
+                                    <ul className="submenu">
+                                        <li><a href="#"> 分類一 </a></li>
+                                        <li><a href="#"> 分類二 </a></li>
+                                        <li><a href="#"> 分類三 </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <small>copyright &copy; 2024 </small>
+                        </nav>
+
+                    </footer>
+
+
+
+
+
+
+
+
+
+                </>
+            )
+        }
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+    </script>
+
+</body>
+
+</html>

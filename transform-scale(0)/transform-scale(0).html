@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./transform-scale(0).css">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const App = () => {
+            return (
+                <>
+                    {/*<section className="section">
+                        <section className="section-1">
+                            <div><img src="" /></div>
+                        </section>
+
+                        <section className="section-2">
+                            <div>
+                                <div><img src="/img/方塊酥/bg1.jpg" />title</div>
+                                <div><img src="/img/方塊酥/bg2.jpg" /></div>
+                            </div>
+                            <div>
+                                <div><img src="/img/方塊酥/bg3.jpg" /></div>
+                                <div><img src="/img/方塊酥/bg4.jpg" /></div>
+                                <div><img src="/img/方塊酥/bg5.jpg" /></div>
+                                <div><img src="/img/方塊酥/bg6.jpg" /></div>
+                                </div>
+                        </section>
+                    </section>*/}
+
+                    <div className="wrap">
+                        <div className="item">
+                            <img src="/img/方塊酥/bg1.jpg" />
+                            <div className="txt">
+                                <h3>Lorem ipsumt.</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                        <div className="item">
+                            <img src="/img/方塊酥/bg2.jpg" />
+                            <div className="txt">
+                                <h3>Lorem ipsumt.</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>                          </div>
+                        </div>
+                        <div className="item">
+                            <img src="/img/方塊酥/bg3.jpg" />
+                            <div className="txt">
+                                <h3>Lorem ipsumt.</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>                            </div>
+                        </div>
+                        <div className="item">
+                            <img src="/img/方塊酥/bg4.jpg" />
+                            <div className="txt">
+                                <h3>Lorem ipsumt.</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>                           </div>
+                        </div>
+                        <div className="item">
+                            <img src="/img/方塊酥/bg5.jpg" />
+                            <div className="txt">
+                                <h3>Lorem ipsumt.</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>                            </div>
+                        </div>
+                    </div>
+                </>
+            )
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+</body>
+
+</html>
